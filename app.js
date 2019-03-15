@@ -12,6 +12,9 @@ app.listen(6605,()=>{
 // 中间件
 app.use(cors());
 app.use(bodyParser.json());
+//托管静态文件
+app.use(express.static("public"));
 
 //挂载
 app.use('/',ninRouter);
+
