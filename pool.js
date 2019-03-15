@@ -1,0 +1,10 @@
+const mysql=require('mysql');
+var pool=mysql.createPool({
+    host:'127.0.0.1',
+    port:'6605',
+    user:'root',
+    password:'',
+    database:'nintendo',
+    connectionLimit:10
+});
+module.exports=pool;
