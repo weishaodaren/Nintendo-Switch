@@ -1,6 +1,7 @@
 const express=require('express');
 const cors=require('cors');
 const bodyParser=require('body-parser');
+const ninRouter=require('./routes/games');
 
 // 建立服务器
 var app=express();
@@ -11,3 +12,6 @@ app.listen(6605,()=>{
 // 中间件
 app.use(cors());
 app.use(bodyParser.json());
+
+//挂载
+app.use('/',ninRouter);
