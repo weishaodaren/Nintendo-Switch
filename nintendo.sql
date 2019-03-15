@@ -1,3 +1,4 @@
+--创建Nintendo数据库
 SET NAMES UTF8;
 DROP DATABASE IF EXISTS nintendo;
 CREATE DATABASE nintendo CHARSET=UTF8;
