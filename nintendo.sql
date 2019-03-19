@@ -20,35 +20,36 @@ INSERT INTO nin_carousel VALUES
 CREATE TABLE nin_tabbar(
   tid INT PRIMARY KEY AUTO_INCREMENT,
   tname VARCHAR(500),
+  publish VARCHAR(128),
   publishTime VARCHAR(128),
   imgUrl VARCHAR(64)
 );
 INSERT INTO nin_tabbar VALUES
-(NULL,'Nintendo Switch','','http://127.0.0.1:6605/images/5.jpg'),
-(NULL,'Nintendo 3Ds','','http://127.0.0.1:6605/images/4.jpg'),
-(NULL,'Nintendo ammiibo','','http://127.0.0.1:6605/images/3.jpg'),
-(NULL,'Nintendo Switch游戏软件','','http://127.0.0.1:6605/images/2.jpg'),
-(NULL,'Nintendo 3Ds游戏软件','','http://127.0.0.1:6605/images/1.jpg'),
+(NULL,'Nintendo Switch','','','http://127.0.0.1:6605/images/5.jpg'),
+(NULL,'Nintendo 3Ds','','','http://127.0.0.1:6605/images/4.jpg'),
+(NULL,'Nintendo ammiibo','','','http://127.0.0.1:6605/images/3.jpg'),
+(NULL,'Nintendo Switch游戏软件','','','http://127.0.0.1:6605/images/2.jpg'),
+(NULL,'Nintendo 3Ds游戏软件','','','http://127.0.0.1:6605/images/1.jpg'),
 (NULL,
 '通过Nintendo Labo来体验制作、简易VR〝Nintendo Labo Toy-Con 04: VR套装”中文版即将发售',
-'Nintendo Switch2019.3.7','http://127.0.0.1:6605/images/190307_01.jpg'),
-(NULL,'『進め！キノピオ隊長』发布免费更新，全部关卡支持2人冒险！付费新增内容预定公开下载！','NintendoSwitch2019.2.22','http://127.0.0.1:6605/images/190307_02.jpg'),
+'Nintendo Switch','2019.3.7','http://127.0.0.1:6605/images/190307_01.jpg'),
+(NULL,'『進め！キノピオ隊長』发布免费更新，全部关卡支持2人冒险！付费新增内容预定公开下载！','NintendoSwitch','2019.2.22','http://127.0.0.1:6605/images/190307_02.jpg'),
 (NULL,'Nintendo Account之Nintendo Switch Online服务预定于今年春天开始',
-'Nintendo Switch2019.2.20','http://127.0.0.1:6605/images/190307_03.jpg'),
+'Nintendo Switch','2019.2.20','http://127.0.0.1:6605/images/190307_03.jpg'),
 (NULL,'《FIRE EMBLEM 风花雪月》介紹视频',
-'Nintendo Switch2019.2.19','http://127.0.0.1:6605/images/190307_04.jpg'),
+'Nintendo Switch','2019.2.19','http://127.0.0.1:6605/images/190307_04.jpg'),
 (NULL,'《Super Mario Maker 2 (超级马力欧创作家 2)》介紹视频',
-'Nintendo Switch2019.2.18','http://127.0.0.1:6605/images/190307_05.jpg'),
+'Nintendo Switch','2019.2.18','http://127.0.0.1:6605/images/190307_05.jpg'),
 (NULL,'《ASTRAL CHAIN™》(暂定名称)介绍视频',
-'Nintendo Switch2019.2.15','http://127.0.0.1:6605/images/190307_06.jpg'),
+'Nintendo Switch','2019.2.15','http://127.0.0.1:6605/images/190307_06.jpg'),
 (NULL,'《勇者斗恶龙XI S 寻觅逝去的时光 – Definitive Edition》介绍视频',
-'Nintendo Switch2019.2.15','http://127.0.0.1:6605/images/190307_07.jpg'),
+'Nintendo Switch','2019.2.15','http://127.0.0.1:6605/images/190307_07.jpg'),
 (NULL,'《塞尔达传说 织梦岛》介绍视频　',
-'Nintendo Switch2019.2.15','http://127.0.0.1:6605/images/190307_08.jpg'),
-(NULL,'连接到提供Nintendo eShop下载软件购买服务的外部网页。','','kl11.jpg'),
-(NULL,'Nintendo Switch支持','','http://127.0.0.1:6605/images/3.gif'),
-(NULL,'Nintendo 3DS支持','','http://127.0.0.1:6605/images/2.gif'),
-(NULL,'维修相关信息','','http://127.0.0.1:6605/images/1.gif');
+'Nintendo Switch','2019.2.15','http://127.0.0.1:6605/images/190307_08.jpg'),
+(NULL,'连接到提供Nintendo eShop下载软件购买服务的外部网页。','','','kl11.jpg'),
+(NULL,'Nintendo Switch支持','','','http://127.0.0.1:6605/images/3.gif'),
+(NULL,'Nintendo 3DS支持','','','http://127.0.0.1:6605/images/2.gif'),
+(NULL,'维修相关信息','','','http://127.0.0.1:6605/images/1.gif');
 
 -- 创建轮播下方广告图
 CREATE TABLE nin_adv(
