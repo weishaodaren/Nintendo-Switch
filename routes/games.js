@@ -20,7 +20,7 @@ var router=express.Router();
 
 //获取最新话题热点游戏图片
     router.get('/index_middle',(req,res)=>{
-        pool.query('SELECT tname,publishTime,imgUrl FROM nin_tabbar',(err,result)=>{
+        pool.query('SELECT tname,publishTime,Gamer,imgUrl FROM nin_tabbar',(err,result)=>{
             if(err) throw err;
             res.send(result);
         });
