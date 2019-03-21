@@ -76,8 +76,8 @@ INSERT INTO nin_tool VALUES
 (NULL,'中文','http://127.0.0.1:6605/images/support_cn_tc.svg'),
 (NULL,'标志','http://127.0.0.1:6605/images/logo-nintendo.svg'),
 (NULL,'微信','http://127.0.0.1:6605/images/wx.png'),
-(NULL,'FB','http://127.0.0.1:6605/images/fb.png'),
-(NULL,'YT','http://127.0.0.1:6605/images/yt.png'),
+(NULL,'Facebook','http://127.0.0.1:6605/images/fb.png'),
+(NULL,'YouTube','http://127.0.0.1:6605/images/yt.png'),
 (NULL,'微博','http://127.0.0.1:6605/images/sina.png');
 
 -- 创建底部推荐游戏 图表
