@@ -39,8 +39,8 @@ var router=express.Router();
         pool.query('SELECT * FROM nin_recommand',(err,result)=>{
             if(err) throw err;
             res.send(result);
-        })
-    })
+        });
+    });
 
     //搜索游戏
     router.get('/index_select',(req,res)=>{
@@ -70,4 +70,12 @@ var router=express.Router();
           { "value": "机兽战记 狂野爆发 王者爆发", "address": "TAKARA TOMY" }
         ]);
     })
+
+    //SVG 矢量图
+    router.get('/index_svg',(req,res)=>{
+        pool.query('SELECT svgUrl FROM nin_svg',(err,result)=>{
+            if(err) throw err;
+            res.send(result);
+        });
+    });
 module.exports=router;
