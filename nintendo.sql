@@ -122,4 +122,5 @@ INSERT INTO nin_games VALUES
 (NULL,'http://127.0.0.1:6605/images/Astral01.jpg'),
 (NULL,'http://127.0.0.1:6605/images/Astral02.jpg'),
 (NULL,'http://127.0.0.1:6605/images/Astral03.jpg'),
-(NULL,'http://127.0.0.1:6605/images/Astral04.jpg');
+(NULL,'http://127.0.0.1:6605/images/Astral04.jpg'),
+(NULL,'http://127.0.0.1:6605/images/Astral05.jpg');
