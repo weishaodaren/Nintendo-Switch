@@ -78,4 +78,14 @@ var router=express.Router();
             res.send(result);
         });
     });
+
+
+    // 商品列表
+router.get('/about_games',(req,res)=>{
+    pool.query('SELECT * FROM nin_games',(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
+
 module.exports=router;

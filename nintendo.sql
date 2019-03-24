@@ -111,3 +111,15 @@ INSERT INTO nin_recommand VALUES
 (NULL,'生化危机4','http://127.0.0.1:6605/images/bottom18.jpg','','2019.5.21','CAPCOM','下载版'),
 (NULL,'英雄不再','http://127.0.0.1:6605/images/bottom19.jpg','','2019.1.18','Grasshopper Manufacture Inc','盒装版/下载版'),
 (NULL,'机兽战记 狂野爆发 王者爆发','http://127.0.0.1:6605/images/bottom20.jpg','','2019.2.28','TAKARA TOMY','盒装版/下载版');
+
+
+CREATE TABLE nin_games(
+  gid INT PRIMARY KEY AUTO_INCREMENT,
+  gameUrl VARCHAR(256)
+);
+INSERT INTO nin_games VALUES
+(NULL,'http://127.0.0.1:6605/images/Astral.jpg'),
+(NULL,'http://127.0.0.1:6605/images/Astral01.jpg'),
+(NULL,'http://127.0.0.1:6605/images/Astral02.jpg'),
+(NULL,'http://127.0.0.1:6605/images/Astral03.jpg'),
+(NULL,'http://127.0.0.1:6605/images/Astral04.jpg');
