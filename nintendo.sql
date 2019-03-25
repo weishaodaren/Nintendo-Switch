@@ -19,37 +19,38 @@ INSERT INTO nin_carousel VALUES
 -- 创建标题导航栏表
 CREATE TABLE nin_tabbar(
   tid INT PRIMARY KEY AUTO_INCREMENT,
+  lid INT,
   tname VARCHAR(500),
   Gamer VARCHAR(128),
   imgUrl VARCHAR(64),
   publishTime VARCHAR(128)
 );
 INSERT INTO nin_tabbar VALUES
-(NULL,'Nintendo Switch','','http://127.0.0.1:6605/images/5.jpg',''),
-(NULL,'Nintendo 3Ds','','http://127.0.0.1:6605/images/4.jpg',''),
-(NULL,'Nintendo ammiibo','','http://127.0.0.1:6605/images/3.jpg',''),
-(NULL,'Nintendo Switch游戏软件','','http://127.0.0.1:6605/images/2.jpg',''),
-(NULL,'Nintendo 3Ds游戏软件','','http://127.0.0.1:6605/images/1.jpg',''),
-(NULL,
+(NULL,1,'Nintendo Switch','','http://127.0.0.1:6605/images/5.jpg',''),
+(NULL,2,'Nintendo 3Ds','','http://127.0.0.1:6605/images/4.jpg',''),
+(NULL,3,'Nintendo ammiibo','','http://127.0.0.1:6605/images/3.jpg',''),
+(NULL,4,'Nintendo Switch游戏软件','','http://127.0.0.1:6605/images/2.jpg',''),
+(NULL,5,'Nintendo 3Ds游戏软件','','http://127.0.0.1:6605/images/1.jpg',''),
+(NULL,6,
 '通过Nintendo Labo来体验制作、简易VR〝Nintendo Labo Toy-Con 04: VR套装”中文版即将发售',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_01.jpg','2019.3.7'),
-(NULL,'『進め！キノピオ隊長』发布免费更新，全部关卡支持2人冒险！付费新增内容预定公开下载！','NintendoSwitch','http://127.0.0.1:6605/images/190307_02.jpg','2019.2.22'),
-(NULL,'Nintendo Account之Nintendo Switch Online服务预定于今年春天开始',
+(NULL,7,'『進め！キノピオ隊長』发布免费更新，全部关卡支持2人冒险！付费新增内容预定公开下载！','NintendoSwitch','http://127.0.0.1:6605/images/190307_02.jpg','2019.2.22'),
+(NULL,8,'Nintendo Account之Nintendo Switch Online服务预定于今年春天开始',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_03.jpg','2019.2.20'),
-(NULL,'《FIRE EMBLEM 风花雪月》介紹视频',
+(NULL,9,'《FIRE EMBLEM 风花雪月》介紹视频',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_04.jpg','2019.2.19'),
-(NULL,'《Super Mario Maker 2 (超级马力欧创作家 2)》介紹视频',
+(NULL,10,'《Super Mario Maker 2 (超级马力欧创作家 2)》介紹视频',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_05.jpg','2019.2.18'),
-(NULL,'《ASTRAL CHAIN™》(暂定名称)介绍视频',
+(NULL,11,'《ASTRAL CHAIN™》(暂定名称)介绍视频',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_06.jpg','2019.2.15'),
-(NULL,'《勇者斗恶龙XI S 寻觅逝去的时光 – Definitive Edition》介绍视频',
+(NULL,12,'《勇者斗恶龙XI S 寻觅逝去的时光 – Definitive Edition》介绍视频',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_07.jpg','2019.2.15'),
-(NULL,'《塞尔达传说 织梦岛》介绍视频　',
+(NULL,13,'《塞尔达传说 织梦岛》介绍视频　',
 'Nintendo Switch','http://127.0.0.1:6605/images/190307_08.jpg','2019.2.15'),
-(NULL,'连接到提供Nintendo eShop下载软件购买服务的外部网页。','','kl11.jpg',''),
-(NULL,'Nintendo Switch支持','','http://127.0.0.1:6605/images/3.gif',''),
-(NULL,'Nintendo 3DS支持','','http://127.0.0.1:6605/images/2.gif',''),
-(NULL,'维修相关信息','','http://127.0.0.1:6605/images/1.gif','');
+(NULL,14,'连接到提供Nintendo eShop下载软件购买服务的外部网页。','','kl11.jpg',''),
+(NULL,15,'Nintendo Switch支持','','http://127.0.0.1:6605/images/3.gif',''),
+(NULL,16,'Nintendo 3DS支持','','http://127.0.0.1:6605/images/2.gif',''),
+(NULL,17,'维修相关信息','','http://127.0.0.1:6605/images/1.gif','');
 
 -- 创建轮播下方广告图
 CREATE TABLE nin_adv(
@@ -112,7 +113,7 @@ INSERT INTO nin_recommand VALUES
 (NULL,'英雄不再','http://127.0.0.1:6605/images/bottom19.jpg','','2019.1.18','Grasshopper Manufacture Inc','盒装版/下载版'),
 (NULL,'机兽战记 狂野爆发 王者爆发','http://127.0.0.1:6605/images/bottom20.jpg','','2019.2.28','TAKARA TOMY','盒装版/下载版');
 
-
+-- 蓝色封面游戏轮播图
 CREATE TABLE nin_games(
   gid INT PRIMARY KEY AUTO_INCREMENT,
   gameUrl VARCHAR(256)
@@ -125,8 +126,23 @@ INSERT INTO nin_games VALUES
 (NULL,'http://127.0.0.1:6605/images/Astral04.jpg'),
 (NULL,'http://127.0.0.1:6605/images/Astral05.jpg');
 
+-- VR游戏轮播图
+CREATE TABLE nin_games_vr(
+  gid INT PRIMARY KEY AUTO_INCREMENT,
+  gameUrl VARCHAR(256)
+);
+INSERT INTO nin_games_vr VALUES
+(NULL,'http://127.0.0.1:6605/images/toycon01.jpg'),
+(NULL,'http://127.0.0.1:6605/images/toycon02.jpg'),
+(NULL,'http://127.0.0.1:6605/images/toycon03.jpg'),
+(NULL,'http://127.0.0.1:6605/images/toycon04.jpg'),
+(NULL,'http://127.0.0.1:6605/images/toycon05.jpg'),
+(NULL,'http://127.0.0.1:6605/images/toycon06.jpg');
+
+
 CREATE TABLE nin_games_msg(
   gameId INT PRIMARY KEY AUTO_INCREMENT,
+  findId INT,
   gameTitle VARCHAR(256),
   gameMoney VARCHAR(50),
   g_msg1  VARCHAR(500),
@@ -142,4 +158,4 @@ CREATE TABLE nin_games_msg(
   g_style VARCHAR(500)
 );
 INSERT INTO nin_games_msg VALUES
-(NULL,'ASTRAL CHAIN下载版（带包）','525.00 人民币','白金游戏全新！','Nintendo Switch上出现了一款充分利用双方双重战斗的全新感知动作游戏。','作为警察的一个特殊单位，面对外来物种。许多伤害人类的事件。','舞台是不久的将来的一个城市。突然出现在地球上的外来物种污染了地球，造成了许多伤害人类的事件。为了对抗普通警察中不寻常的生物，主人用人类创造的特殊武器“军团”将开始作为特种部队成员解决案件。','与特种武器“军团”合作打击敌人。','“双重行动”是这项工作的主要特色。主角和军团巧妙地配合各种风格，如“主角与军团同时攻击同一敌人”，“攻击不同的敌人”，“对军团进行攻击并以主角支持物品”等。我会战斗。','发展是白金游戏。一个强大的制作团队，在角色设计中欢迎“Kasakazu Katsura”。','最初的计划是Takahisa Taura，他被称为“NieR：Automata”的游戏设计师，监督的是Hideki Kamiya，他参与了“Beyonetta系列”，并且游戏的角色设计熟悉漫画“ZETMAN”和“博士”的创作者。 Masakazu Katsura负责。这是一款具有全新游戏感的动作游戏，因为它是“触摸是最好的感觉”操作的白金游戏风格。','Nintendo Switch','2019年8月30日','双重行动');
+(NULL,1,'ASTRAL CHAIN下载版（带包）','525.00 人民币','白金游戏全新！','Nintendo Switch上出现了一款充分利用双方双重战斗的全新感知动作游戏。','作为警察的一个特殊单位，面对外来物种。许多伤害人类的事件。','舞台是不久的将来的一个城市。突然出现在地球上的外来物种污染了地球，造成了许多伤害人类的事件。为了对抗普通警察中不寻常的生物，主人用人类创造的特殊武器“军团”将开始作为特种部队成员解决案件。','与特种武器“军团”合作打击敌人。','“双重行动”是这项工作的主要特色。主角和军团巧妙地配合各种风格，如“主角与军团同时攻击同一敌人”，“攻击不同的敌人”，“对军团进行攻击并以主角支持物品”等。我会战斗。','发展是白金游戏。一个强大的制作团队，在角色设计中欢迎“Kasakazu Katsura”。','最初的计划是Takahisa Taura，他被称为“NieR：Automata”的游戏设计师，监督的是Hideki Kamiya，他参与了“Beyonetta系列”，并且游戏的角色设计熟悉漫画“ZETMAN”和“博士”的创作者。 Masakazu Katsura负责。这是一款具有全新游戏感的动作游戏，因为它是“触摸是最好的感觉”操作的白金游戏风格。','Nintendo Switch','2019年8月30日','双重行动');

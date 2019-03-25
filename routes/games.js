@@ -20,7 +20,7 @@ var router=express.Router();
 
 //获取最新话题热点游戏图片
     router.get('/index_middle',(req,res)=>{
-        pool.query('SELECT tid,tname,publishTime,Gamer,imgUrl FROM nin_tabbar',(err,result)=>{
+        pool.query('SELECT tid,lid,tname,publishTime,Gamer,imgUrl FROM nin_tabbar',(err,result)=>{
             if(err) throw err;
             res.send(result);
         });
@@ -83,6 +83,14 @@ var router=express.Router();
     // 商品列表
 router.get('/about_games',(req,res)=>{
     pool.query('SELECT * FROM nin_games',(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
+
+//VR 眼睛
+router.get('/about_games_vr',(req,res)=>{
+    pool.query('SELECT * FROM nin_games_vr',(err,result)=>{
         if(err) throw err;
         res.send(result);
     })
