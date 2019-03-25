@@ -88,4 +88,11 @@ router.get('/about_games',(req,res)=>{
     })
 })
 
+//
+router.get('/about_games_msg',(req,res)=>{
+    pool.query('SELECT * FROM nin_games_msg',(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
 module.exports=router;
