@@ -11,7 +11,7 @@
 <button id="d1">111</button>
     <script>
         d1.onclick=function(){
-        axios.get('http://127.0.0.1:6605/about_games_msg').then((res)=>{
+        axios.get('http://127.0.0.1:6605/newslist').then((res)=>{
             console.log(res.data);
         }).catch((err)=>{
             console.log(err);
