@@ -105,19 +105,6 @@ router.get('/about_games_msg',(req,res)=>{
 })
 
 // ----------------------------------------------------------------------------------
-//功能一:home 组件轮播图片
-//http://127.0.0.1:3000/imageList
-// app.get("/imageList",(req,res)=>{
-//     //1:将轮播图中所需图片 复制public/img
-//     //2:查询
-//     var list = [
-//       {id:1,img_url:"http://127.0.0.1:3000/img/banner1.png"},
-//       {id:2,img_url:"http://127.0.0.1:3000/img/banner2.png"},
-//       {id:3,img_url:"http://127.0.0.1:3000/img/banner3.png"},
-//       {id:4,img_url:"http://127.0.0.1:3000/img/banner4.png"},
-//     ];
-//     res.send(list); 
-//  });
  
  router.get("/newslist",(req,res)=>{
    //1:获取参数 pno pageSize
