@@ -2,6 +2,8 @@ const express=require('express');
 const pool=require('../pool');
 // 路由
 var router=express.Router();
+
+var URL = 'http://127.0.0.1:6605/';
 //获取轮播img
     router.get('/index',(req,res)=>{
     pool.query('SELECT imgUrl FROM nin_carousel',(err,result)=>{
@@ -429,5 +431,14 @@ router.get('/about_games_msg',(req,res)=>{
    });
    //6.执行成功
  });
+
+// GIF 图
+router.get('/myGif',(req,res)=>{
+  res.send(
+    'http://127.0.0.1:6605/images/switch.gif'
+  );
+});
+
+
 
 module.exports=router;
