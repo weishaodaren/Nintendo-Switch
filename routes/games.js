@@ -435,7 +435,10 @@ router.get('/about_games_msg',(req,res)=>{
 // GIF 图
 router.get('/myGif',(req,res)=>{
   res.send(
-    'http://127.0.0.1:6605/images/switch.gif'
+    [
+      {'myGif':URL+'images/switch.gif'},
+      {'myGif':URL+'images/switch1.gif'}
+  ]
   );
 });
 
