@@ -226,8 +226,6 @@ CREATE TABLE xz_login(
   upwd  VARCHAR(32)
 );
 INSERT INTO xz_login VALUES(null,'admin',md5('6669996969669'));
-#理解:用户输入123对用户输入内容加密
-#加密后与数据密码比较
 #SELECT id FROM xz_login
 #WHERE uname = ? AND upwd = md5(?)
 

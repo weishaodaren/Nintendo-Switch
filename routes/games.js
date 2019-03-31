@@ -442,6 +442,18 @@ router.get('/myGif',(req,res)=>{
   );
 });
 
-
+// 注册
+router.get('/myReg',(req,res)=>{
+  var uname=req.query.uname;
+  var upwd=req.query.upwd;
+  pool.query('INSERT INTO xz_login VALUES (NULL,?,md5(?))',[uname,upwd],(err,result)=>{
+    if(err) throw err;
+    if(result.affectedRows>0){
+      res.send({code:1,msg:'注册成功'})
+    }else{
+      res.send({code:-1,msg:'填入信息有误'})
+    }
+  })
+})
 
 module.exports=router;
